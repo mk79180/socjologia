@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -13,160 +14,144 @@
   <meta property="og:image" content="https://github.com/mk79180/socjologia/blob/main/background.jpg?raw=true"> 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mk79180.github.io/socjologia/">
+</head>
 
-  <style>
-      body {
-          background: 
-              linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-              url('background.jpg');
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          text-align: center;
-          padding: 50px;
-          margin: 0;
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-      }
-      .hint {
-          background-color: rgba(255, 255, 255, 0.85);
-          margin: 20px auto;
-          padding: 25px;
-          width: 90%;
-          max-width: 600px;
-          border-radius: 20px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-          animation: fadeIn 1.5s ease-in;
-      }
-      @keyframes fadeIn {
-          from {opacity: 0;}
-          to {opacity: 1;}
-      }
-      .emoji {
-          font-size: 70px;
-          margin: 20px;
-          animation: bounce 2s infinite;
-      }
-      @keyframes bounce {
-          0%, 100% {transform: translateY(0);}
-          50% {transform: translateY(-15px);}
-      }
-      .guess {
-          margin-top: 30px;
-          font-size: 22px;
-          font-weight: bold;
-          color: #004085;
-      }
-      input[type="text"] {
-          padding: 12px;
-          font-size: 18px;
-          width: 280px;
-          border: 2px solid #0077cc;
-          border-radius: 12px;
-          margin-top: 20px;
-          transition: all 0.3s ease;
-          outline: none;
-      }
-      input[type="text"]:focus {
-          border-color: #005fa3;
-          background-color: #eef6fb;
-      }
-      button {
-          padding: 12px 25px;
-          font-size: 18px;
-          margin-top: 15px;
-          background-color: #0077cc;
-          color: white;
-          border: none;
-          border-radius: 12px;
-          cursor: pointer;
-          transition: background-color 0.3s, transform 0.2s;
-      }
-      button:hover {
-          background-color: #005fa3;
-          transform: scale(1.05);
-      }
-      #result {
-          margin-top: 25px;
-          font-size: 20px;
-          font-weight: bold;
-      }
-  </style>
+    <style>
+        body {
+            background: 
+                linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hint {
+            background-color: rgba(255, 255, 255, 0.85);
+            margin: 20px auto;
+            padding: 25px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .emoji {
+            font-size: 70px;
+            margin: 20px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {transform: translateY(0);}
+            50% {transform: translateY(-15px);}
+        }
+        .guess {
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #004085;
+        }
+        input[type="text"] {
+            padding: 12px;
+            font-size: 18px;
+            width: 280px;
+            border: 2px solid #0077cc;
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #005fa3;
+            background-color: #eef6fb;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin-top: 15px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #005fa3;
+            transform: scale(1.05);
+        }
+        #result {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Zgadnij, o jaki przepis prawa chodzi:))</h1>
+    <h1>Zgadnij, o jaki przepis prawa chodzi:))</h1>
 
-  <div class="emoji">🚗🍻❌</div>
+    <div class="emoji">🚗🍻❌</div>
 
-  <div class="hint">
-      <p>Ryzyko, zagrożenie dla innych, konsekwencje - "Za takie działanie grożą kary takie jak grzywna, ograniczenie wolności, lub nawet pozbawienie wolności do 2 lat"</p>
-  </div>
+    <div class="hint">
+        <p>ryzyko, zagrożenie dla innych, konsekwencje - "Za takie działanie grożą kary takie jak grzywna, ograniczenie wolności, lub nawet pozbawienie wolności do 2 lat"</p>
+    </div>
 
-  <div class="guess">
-      Podaj odpowiedź:
-  </div>
+    <div class="guess">
+        Podaj odpowiedz:
+    </div>
 
-  <input type="text" id="answer" placeholder="Np. art. 178a kk...">
-  <br>
-  <button onclick="checkAnswer()">Sprawdź!</button>
+    <input type="text" id="answer" placeholder="twoja odpowiedź...">
+    <br>
+    <button onclick="checkAnswer()">Sprawdź!</button>
 
-  <div id="result"></div>
+    <div id="result"></div>
 
-  <script>
-      function normalizeText(text) {
-          return text
-              .normalize("NFD") // usuń znaki diakrytyczne (np. ś → s)
-              .replace(/[\u0300-\u036f]/g, "")
-              .toLowerCase();
-      }
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.trim().toLowerCase();
+            const result = document.getElementById("result");
 
-      function checkAnswer() {
-          const rawAnswer = document.getElementById("answer").value.trim();
-          const answer = normalizeText(rawAnswer);
-          const result = document.getElementById("result");
+            const keywords = [
+                "jazda", 
+                "prowadzenie", 
+                "po alkoholu", 
+                "pod wpływem alkoholu", 
+                "po pijanemu",
+                "zakaz prowadzenia", 
+                "zakaz jazdy",
+                "pojazd po alkoholu",
+                "pojazd pod wpływem"
+            ];
 
-          const keywords = [
-              "jazda", 
-              "prowadzenie", 
-              "po alkoholu", 
-              "pod wplywem alkoholu", 
-              "po pijanemu", 
-              "178",
-              "178a",
-              "zakaz prowadzenia", 
-              "zakaz jazdy",
-              "pojazd po alkoholu",
-              "pojazd pod wplywem"
-          ];
+            let matches = 0;
+            for (let word of keywords) {
+                if (answer.includes(word)) {
+                    matches++;
+                }
+            }
 
-          let matches = 0;
-          for (let word of keywords) {
-              if (answer.includes(word)) {
-                  matches++;
-              }
-          }
-
-          if (matches >= 2 || answer.includes("178a") || answer.includes("art 178a")) {
-              result.innerHTML = "🎉 Brawo :)";
-              result.style.color = "green";
-          } else {
-              result.innerHTML = "❌ Niestety, spróbuj jeszcze raz :(";
-              result.style.color = "red";
-          }
-      }
-
-      // Pozwala zatwierdzić Enterem
-      document.getElementById("answer").addEventListener("keypress", function(event) {
-          if (event.key === "Enter") {
-              checkAnswer();
-          }
-      });
-  </script>
+            if (matches >= 2 || answer.includes("178a") || answer.includes("art 178a")) {
+                result.innerHTML = "🎉 Brawo:)";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "❌ Niestety, spróbuj jeszcze raz:(";
+                result.style.color = "red";
+            }
+        }
+    </script>
 
 </body>
 </html>
