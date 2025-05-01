@@ -1,20 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Odgadnij artykuł!</title>
-  <meta name="description" content="Odgadnij, czego dotyczy ten artykuł z Kodeksu Karnego.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odgadnij artykuł!</title>
+    <meta name="description" content="Odgadnij, czego dotyczy ten artykuł z Kodeksu Karnego.">
 
-  <!-- Miniatura linku -->
-  <meta property="og:title" content="Odgadnij artykuł:))">
-  <meta property="og:description" content="odgadnij przepis prawa!">
-  <meta property="og:image" content="https://github.com/mk79180/socjologia/blob/main/background.jpg?raw=true"> 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mk79180.github.io/socjologia/">
-</head>
+    <!-- Miniatura linku -->
+    <meta property="og:title" content="Odgadnij artykuł:))">
+    <meta property="og:description" content="odgadnij przepis prawa!">
+    <meta property="og:image" content="https://github.com/mk79180/socjologia/blob/main/background.jpg?raw=true"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mk79180.github.io/socjologia/">
 
     <style>
         body {
@@ -97,6 +95,16 @@
             font-size: 20px;
             font-weight: bold;
         }
+        #articleText {
+            display: none;
+            margin-top: 20px;
+            max-width: 600px;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -119,7 +127,7 @@
 
     <div id="result"></div>
 
-    <div id="articleText" style="display:none; margin-top: 20px; max-width: 600px; background-color: #f0f8ff; padding: 20px; border-radius: 15px; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <div id="articleText">
         <strong>Art. 178a § 1 k.k.:</strong><br>
         Kto, znajdując się w stanie nietrzeźwości lub pod wpływem środka odurzającego, prowadzi pojazd mechaniczny w ruchu lądowym, wodnym lub powietrznym, 
         podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 2.
