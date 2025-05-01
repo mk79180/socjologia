@@ -119,10 +119,17 @@
 
     <div id="result"></div>
 
+    <div id="articleText" style="display:none; margin-top: 20px; max-width: 600px; background-color: #f0f8ff; padding: 20px; border-radius: 15px; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <strong>Art. 178a § 1 k.k.:</strong><br>
+        Kto, znajdując się w stanie nietrzeźwości lub pod wpływem środka odurzającego, prowadzi pojazd mechaniczny w ruchu lądowym, wodnym lub powietrznym, 
+        podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 2.
+    </div>
+
     <script>
         function checkAnswer() {
             const answer = document.getElementById("answer").value.trim().toLowerCase();
             const result = document.getElementById("result");
+            const articleText = document.getElementById("articleText");
 
             const keywords = [
                 "jazda", 
@@ -146,9 +153,11 @@
             if (matches >= 2 || answer.includes("178a") || answer.includes("art 178a")) {
                 result.innerHTML = "🎉 Brawo:)";
                 result.style.color = "green";
+                articleText.style.display = "block";
             } else {
                 result.innerHTML = "❌ Niestety, spróbuj jeszcze raz:(";
                 result.style.color = "red";
+                articleText.style.display = "none";
             }
         }
     </script>
